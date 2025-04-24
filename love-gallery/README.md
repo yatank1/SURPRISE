@@ -13,16 +13,18 @@ A beautiful photo gallery to surprise your loved one with special moments.
 
 ### Deploy to GitHub Pages
 
-1. **Push your code to GitHub**
-   - Make sure your repository is public
-   - Push your code to the main branch
+1. **Access the Live Site**
+   - The gallery is already deployed and available at: https://yatank1.github.io/SURPRISE/
+   - No additional setup is required to view the gallery
 
-2. **Automatic Deployment**
-   - GitHub Actions will automatically deploy your site to GitHub Pages
-   - Your site will be available at: https://yatank1.github.io/sur/
+2. **How It Works**
+   - We've created a dedicated `gh-pages` branch that GitHub Pages uses to serve the site
+   - The site is automatically available at the URL above
+   - If you see a 404 error, try clearing your browser cache or wait a few minutes
 
-3. **Manual Deployment**
-   - If you prefer to deploy manually, follow the instructions in [GITHUB_PAGES_DEPLOYMENT.md](GITHUB_PAGES_DEPLOYMENT.md)
+3. **Updating the Gallery**
+   - To update the gallery, push changes to the `gh-pages` branch
+   - You can also use the GitHub Actions workflow that automatically deploys changes from the main branch
 
 ### Deploy to Vercel
 

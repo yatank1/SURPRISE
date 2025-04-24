@@ -1,4 +1,11 @@
 {
+  "name": "surprise",
+  "version": "1.0.0",
+  "description": "A beautiful photo gallery to surprise your loved one",
+  "main": "index.js",
+  "scripts": {
+    "update-gh-pages": "node update-gh-pages.js"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^5.1.0",
