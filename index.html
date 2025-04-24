@@ -58,6 +58,62 @@
       transform: translateY(-3px);
       box-shadow: 0 8px 20px rgba(255, 107, 107, 0.4);
     }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .gallery-item {
+      width: 200px;
+      height: 200px;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .gallery-item:hover {
+      transform: scale(1.05);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .fullscreen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+    .fullscreen.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+    .fullscreen img {
+      max-width: 90%;
+      max-height: 90%;
+      object-fit: contain;
+    }
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: white;
+      font-size: 30px;
+      cursor: pointer;
+    }
     @keyframes pulse {
       0% {
         transform: scale(1);
@@ -76,12 +132,59 @@
     <div class="heart">❤️</div>
     <h1>Our Love Gallery</h1>
     <p>A beautiful collection of our special moments together.</p>
-    <a href="./love-gallery/client/dist/index.html" class="btn">Enter Gallery</a>
+
+    <div class="gallery">
+      <div class="gallery-item" onclick="openFullscreen('test.jpg')">
+        <img src="test.jpg" alt="Love moment 1">
+      </div>
+      <div class="gallery-item" onclick="openFullscreen('test.jpg')">
+        <img src="test.jpg" alt="Love moment 2">
+      </div>
+      <div class="gallery-item" onclick="openFullscreen('test.jpg')">
+        <img src="test.jpg" alt="Love moment 3">
+      </div>
+      <div class="gallery-item" onclick="openFullscreen('test.jpg')">
+        <img src="test.jpg" alt="Love moment 4">
+      </div>
+      <div class="gallery-item" onclick="openFullscreen('test.jpg')">
+        <img src="test.jpg" alt="Love moment 5">
+      </div>
+      <div class="gallery-item" onclick="openFullscreen('test.jpg')">
+        <img src="test.jpg" alt="Love moment 6">
+      </div>
+      <div class="gallery-item" onclick="openFullscreen('test.jpg')">
+        <img src="test.jpg" alt="Love moment 7">
+      </div>
+      <div class="gallery-item" onclick="openFullscreen('test.jpg')">
+        <img src="test.jpg" alt="Love moment 8">
+      </div>
+      <div class="gallery-item" onclick="openFullscreen('test.jpg')">
+        <img src="test.jpg" alt="Love moment 9">
+      </div>
+      <div class="gallery-item" onclick="openFullscreen('test.jpg')">
+        <img src="test.jpg" alt="Love moment 10">
+      </div>
+    </div>
+  </div>
+
+  <div class="fullscreen" id="fullscreen">
+    <div class="close-btn" onclick="closeFullscreen()">×</div>
+    <img id="fullscreen-img" src="" alt="Fullscreen image">
   </div>
 
   <script>
-    // Redirect to the actual gallery
-    window.location.href = "./love-gallery/client/dist/index.html";
+    function openFullscreen(imgSrc) {
+      const fullscreen = document.getElementById('fullscreen');
+      const fullscreenImg = document.getElementById('fullscreen-img');
+
+      fullscreenImg.src = imgSrc;
+      fullscreen.classList.add('active');
+    }
+
+    function closeFullscreen() {
+      const fullscreen = document.getElementById('fullscreen');
+      fullscreen.classList.remove('active');
+    }
   </script>
 </body>
 </html>
