@@ -11,7 +11,8 @@
     "build": "node build.js",
     "vercel-build": "node build.js",
     "predeploy": "node copy-images.js && cd client && npm run build",
-    "deploy": "cd client && npx gh-pages -d dist"
+    "deploy": "cd client && npx gh-pages -d dist",
+    "deploy-github": "node deploy-to-github.js"
   },
   "keywords": [
     "love",

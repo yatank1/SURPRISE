@@ -28,6 +28,11 @@ jobs:
       - name: Build
         run: cd client && npm run build
 
+      - name: Prepare for Deployment
+        run: |
+          # Create a copy of index.html at the root level
+          cp client/dist/index.html client/dist/404.html
+
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:

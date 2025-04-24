@@ -17,7 +17,7 @@ const Gallery = () => {
     const fetchImages = async () => {
       try {
         // For GitHub Pages, we'll use a JSON file instead of an API
-        const response = await fetch('/sur/data/images.json');
+        const response = await fetch('./data/images.json');
         const data = await response.json();
         setImages(data);
         setLoading(false);

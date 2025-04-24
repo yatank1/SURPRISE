@@ -15,7 +15,7 @@ const SpecialMessage = () => {
     const fetchMessage = async () => {
       try {
         // For GitHub Pages, we'll use a JSON file instead of an API
-        const response = await fetch('/sur/data/special-message.json');
+        const response = await fetch('./data/special-message.json');
         const data = await response.json();
         setMessage(data);
         setLoading(false);
