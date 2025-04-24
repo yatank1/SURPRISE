@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="refresh" content="0;url=./love-gallery/client/dist/index.html" />
+  <meta http-equiv="refresh" content="0;url=https://yatank1.github.io/SURPRISE/" />
   <title>Page Not Found</title>
   <style>
     body {
@@ -71,13 +71,26 @@
       }
     }
   </style>
+  <script>
+    // This script will handle redirecting to the root of the site
+    window.onload = function() {
+      // Get the current URL
+      var currentUrl = window.location.href;
+
+      // Extract the base URL (up to /SURPRISE/)
+      var baseUrl = currentUrl.split('/SURPRISE/')[0] + '/SURPRISE/';
+
+      // Redirect to the base URL
+      window.location.href = baseUrl;
+    }
+  </script>
 </head>
 <body>
   <div class="container">
     <div class="heart">❤️</div>
     <h1>Page Not Found</h1>
     <p>Redirecting to our Love Gallery...</p>
-    <a href="./love-gallery/client/dist/index.html" class="btn">Go to Gallery</a>
+    <a href="https://yatank1.github.io/SURPRISE/" class="btn">Go to Gallery</a>
   </div>
 </body>
 </html>
